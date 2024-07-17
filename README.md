@@ -1,3 +1,6 @@
+# EBANK-ANGULAR
+Cette application e-bank vise à fournir une plateforme sécurisée et intuitive permettant aux utilisateurs de gérer leurs comptes bancaires et d'effectuer des opérations financières en ligne.
+
 # EBANKANGULAR
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.6.
