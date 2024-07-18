@@ -1,4 +1,4 @@
-import { TransactionMethod } from '../enum/transaction-method.enum';
+import { TransactionMethod } from '../enums/transaction-method.enum';
 
 export class TransactionDto {
     private amount: number;

@@ -1,9 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { AuthRequest } from './auth-request.interface';
-import { AuthResponse } from './auth-response.interface';
-import { UserDto } from '../dto/user-dto.model';
+import { AuthResponse } from '../interfaces/auth-response.interface';
+import { UserDto } from '../dtos/user.dto';
+import { AuthRequest } from '../interfaces/auth-request.interface';
 
 @Injectable({
   providedIn: 'root'

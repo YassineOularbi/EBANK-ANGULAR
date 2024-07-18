@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { AccountType } from '../enum/account-type.enum';
-import { AccountDto } from '../dto/account-dto.model';
-import { AccountService } from '../service/account.service';
+import { AccountType } from '../../../core/enums/account-type.enum';
+import { AccountDto } from '../../../core/dtos/account.dto';
+import { AccountService } from '../../../core/services/account.service';
 import { CommonModule } from '@angular/common';
 
 @Component({

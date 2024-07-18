@@ -1,4 +1,4 @@
-import { AccountType } from "../enum/account-type.enum";
+import { AccountType } from "../enums/account-type.enum";
 import { Beneficiary } from "./beneficiary.model";
 import { Card } from "./card.model";
 import { Transaction } from "./transaction.model";

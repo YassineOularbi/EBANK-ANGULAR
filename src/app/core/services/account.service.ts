@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { AccountDto } from '../dto/account-dto.model';
+import { AccountDto } from '../dtos/account.dto';
 import { Observable } from 'rxjs';
 
 @Injectable({

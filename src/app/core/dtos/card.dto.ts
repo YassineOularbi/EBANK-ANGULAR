@@ -1,6 +1,6 @@
-import { CardTier } from "../enum/card-tier.enum";
-import { CardType } from "../enum/card-type.enum";
-import { NetworkType } from "../enum/network-type.enum";
+import { CardTier } from "../enums/card-tier.enum";
+import { CardType } from "../enums/card-type.enum";
+import { NetworkType } from "../enums/network-type.enum";
 
 export class CardDto {
     private type: CardType;

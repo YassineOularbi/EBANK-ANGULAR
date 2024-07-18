@@ -1,6 +1,6 @@
-import { TransactionContext } from "../enum/transaction-context.enum";
-import { TransactionMethod } from "../enum/transaction-method.enum";
-import { TransactionType } from "../enum/transaction-type.enum";
+import { TransactionContext } from "../enums/transaction-context.enum";
+import { TransactionMethod } from "../enums/transaction-method.enum";
+import { TransactionType } from "../enums/transaction-type.enum";
 import { Account } from "./account.model";
 import { Beneficiary } from "./beneficiary.model";
 import { Card } from "./card.model";
