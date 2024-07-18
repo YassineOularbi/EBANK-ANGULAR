@@ -4,27 +4,33 @@ import { ExternalTransactionComponent } from './external-transaction/external-tr
 import { CardTransactionComponent } from './card-transaction/card-transaction.component';
 import { TransactionListComponent } from './transaction-list/transaction-list.component';
 import { TransactionDetailComponent } from './transaction-detail/transaction-detail.component';
+import { authGuard } from '../../core/guards/auth.guard';
 
 
 export const transactionRoutes: Routes = [
   {
     path: 'transactions/internal/:creditId/:debitId',
-    component: InternalTransactionComponent
+    component: InternalTransactionComponent,
+    canActivate: [authGuard]
   },
   {
     path: 'transactions/external/:accountId/:beneficiaryId',
-    component: ExternalTransactionComponent
+    component: ExternalTransactionComponent,
+    canActivate: [authGuard]
   },
   {
     path: 'transactions/card/:cardId/:beneficiaryId',
-    component: CardTransactionComponent
+    component: CardTransactionComponent,
+    canActivate: [authGuard]
   },
   {
     path: 'transactions/account/:id',
-    component: TransactionListComponent
+    component: TransactionListComponent,
+    canActivate: [authGuard]
   },
   {
     path: 'transactions/:id',
-    component: TransactionDetailComponent
+    component: TransactionDetailComponent,
+    canActivate: [authGuard]
   }
 ];

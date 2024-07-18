@@ -27,33 +27,14 @@ export class LoginComponent implements OnInit{
 
   ngOnInit(): void {
       if(localStorage.getItem("auth-token")){
-        console.log(window.sessionStorage.getItem("auth-token"))
+        console.log(localStorage.getItem("auth-token"))
       }
   }
 
   onSubmit(): void {
     if (this.loginForm.valid) {
       const authRequest: AuthRequest = this.loginForm.value as AuthRequest;
-      this.authService.login(authRequest).subscribe({
-        next: (response: AuthResponse) => {
-          const authResponse: AuthResponse = response;
-
-          localStorage.setItem('auth-token', authResponse.accessToken);
-
-        },
-        error: (err) => {
-          console.error('Error creating account:', err);
-        }
-        
-      }
-        // data => { this.token = data.accessToken;
-        // console.log('Login token:', this.token);
-        // localStorage.setItem("auth-token", this.token);
-        // },
-        // err => {
-        //   err.error.message;
-        // }
-      );
+      this.authService.login(authRequest)
     }
   }
 

@@ -3,23 +3,28 @@ import { BeneficiaryListComponent } from './beneficiary-list/beneficiary-list.co
 import { BeneficiaryDetailComponent } from './beneficiary-detail/beneficiary-detail.component';
 import { BeneficiaryAddComponent } from './beneficiary-add/beneficiary-add.component';
 import { BeneficiaryUpdateComponent } from './beneficiary-update/beneficiary-update.component';
+import { authGuard } from '../../core/guards/auth.guard';
 
 
 export const beneficiaryRoutes: Routes = [
   {
     path: 'beneficiaries/account/:id',
-    component: BeneficiaryListComponent
+    component: BeneficiaryListComponent,
+    canActivate: [authGuard]
   },
   {
     path: 'beneficiaries/:id',
-    component: BeneficiaryDetailComponent
+    component: BeneficiaryDetailComponent,
+    canActivate: [authGuard]
   },
   {
     path: 'beneficiaries/add',
-    component: BeneficiaryAddComponent
+    component: BeneficiaryAddComponent,
+    canActivate: [authGuard]
   },
   {
     path: 'beneficiaries/update/:id',
-    component: BeneficiaryUpdateComponent
+    component: BeneficiaryUpdateComponent,
+    canActivate: [authGuard]
   }
 ];

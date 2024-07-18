@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { UserDto } from '../../../core/dtos/user.dto';
 import { AuthService } from '../../../core/services/auth.service';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { AuthResponse } from '../../../core/interfaces/auth-response.interface';
 
 @Component({
   selector: 'app-signup',
@@ -19,7 +18,7 @@ export class SignupComponent implements OnInit{
   constructor(private authService: AuthService, private fb: FormBuilder) {
     this.signupForm = this.fb.group({
       name: ['', Validators.required],
-      mail: ['', Validators.required, Validators.email],
+      mail: ['', Validators.required],
       username: ['', Validators.required],
       password: ['', Validators.required],
       phone: ['', Validators.required]
@@ -28,25 +27,14 @@ export class SignupComponent implements OnInit{
 
    ngOnInit(): void {
     if(localStorage.getItem("auth-token")){
-      console.log(window.sessionStorage.getItem("auth-token"))
+      console.log(localStorage.getItem("auth-token"))
     }
   }
 
   onSubmit() {
     if (this.signupForm.valid) {
       const userDto: UserDto = this.signupForm.value as UserDto;
-      this.authService.signup(userDto).subscribe({
-        next: (response: AuthResponse) => {
-          const authResponse: AuthResponse = response;
-
-          localStorage.setItem('auth-token', authResponse.accessToken);
-
-        },
-        error: (err) => {
-          console.error('Error creating account:', err);
-        }
-        
-      })
+      this.authService.signup(userDto)
     }
   }
 
