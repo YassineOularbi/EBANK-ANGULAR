@@ -1,1 +1,38 @@
-<p>beneficiary-detail works!</p>
+<div class="beneficiary-detail" *ngIf="beneficiary">
+    <h2>Détails du Bénéficiaire</h2>
+    <div>
+      <label>ID: </label>{{ beneficiary.id }}
+    </div>
+    <div>
+      <label>Nom: </label>{{ beneficiary.name }}
+    </div>
+    <div>
+      <label>IBAN: </label>{{ beneficiary.iban }}
+    </div>
+    <div>
+      <label>Banque: </label>{{ beneficiary.bank }}
+    </div>
+  
+    <h3>Transactions Associées</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Montant</th>
+          <th>Description</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let transaction of beneficiary.transactions">
+          <td>{{ transaction.id }}</td>
+          <td>{{ transaction.amount }}</td>
+          <td>{{ transaction.description }}</td>
+          <td>{{ transaction.date | date }}</td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <button >Retour</button>
+  </div>
+  

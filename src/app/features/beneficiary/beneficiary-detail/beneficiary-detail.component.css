@@ -1,0 +1,53 @@
+.beneficiary-detail {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .beneficiary-detail h2 {
+    margin-bottom: 20px;
+  }
+  
+  .beneficiary-detail div {
+    margin-bottom: 10px;
+  }
+  
+  .beneficiary-detail label {
+    font-weight: bold;
+  }
+  
+  .beneficiary-detail table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .beneficiary-detail table, th, td {
+    border: 1px solid #ddd;
+  }
+  
+  .beneficiary-detail th, td {
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .beneficiary-detail th {
+    background-color: #f4f4f4;
+  }
+  
+  .beneficiary-detail button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .beneficiary-detail button:hover {
+    background-color: #0056b3;
+  }
+  

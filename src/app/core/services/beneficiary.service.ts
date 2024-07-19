@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { BeneficiaryDto } from '../dtos/beneficiary.dto';
+import { Beneficiary } from '../models/beneficiary.model';
 
 @Injectable({
   providedIn: 'root'
@@ -12,13 +13,13 @@ export class BeneficiaryService {
   constructor(private httpClient: HttpClient) {}
 
   // Get all beneficiaries by account ID
-  getAllByAccount(id: string): Observable<BeneficiaryDto[]> {
-    return this.httpClient.get<BeneficiaryDto[]>(`${this.URL}get-all-beneficiary-by-account/${id}`);
+  getAllByAccount(id: string): Observable<Beneficiary[]> {
+    return this.httpClient.get<Beneficiary[]>(`${this.URL}get-all-beneficiary-by-account/${id}`);
   }
 
   // Get beneficiary by ID
-  getById(id: string): Observable<BeneficiaryDto> {
-    return this.httpClient.get<BeneficiaryDto>(`${this.URL}get-by-id/${id}`);
+  getById(id: string): Observable<Beneficiary> {
+    return this.httpClient.get<Beneficiary>(`${this.URL}get-by-id/${id}`);
   }
 
   // Add a new beneficiary

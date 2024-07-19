@@ -1,0 +1,28 @@
+<div class="account-form">
+    <h2>{{ isEditMode ? 'Modifier un Compte' : 'Ajouter un Compte' }}</h2>
+    <form [formGroup]="BeneficiaryForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="name">Nom:</label>
+            <input id="name" formControlName="name" type="text" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label for="iban">IBAN:</label>
+            <input id="iban" formControlName="iban" type="text" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label for="bank">Banque:</label>
+            <input id="bank" formControlName="bank" type="text" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label for="account_id">ID Compte:</label>
+            <input id="account_id" formControlName="account_id" type="number" class="form-control" />
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+            {{ isEditMode ? 'Mettre à Jour' : 'Ajouter' }}
+        </button>
+    </form>
+</div>

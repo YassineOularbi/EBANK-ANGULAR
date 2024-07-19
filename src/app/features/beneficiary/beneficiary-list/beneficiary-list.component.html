@@ -1,1 +1,50 @@
-<p>beneficiary-list works!</p>
+<div class="beneficiary-list">
+    <h2>Liste des Bénéficiaires</h2>
+    <button class="btn btn-add" [routerLink]="['/beneficiary/add']" >Ajouter un Bénéficiaire</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>IBAN</th>
+                <th>Banque</th>
+                <th>Transactions</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let beneficiary of beneficiaries">
+                <td>{{ beneficiary.id }}</td>
+                <td>{{ beneficiary.name }}</td>
+                <td>{{ beneficiary.iban }}</td>
+                <td>{{ beneficiary.bank }}</td>
+                <td>
+                    <table class="transaction-table">
+                      <thead>
+                        <tr>
+                          <th>ID</th>
+                          <th>Montant</th>
+                          <th>Description</th>
+                          <th>Date</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let transaction of beneficiary.transactions">
+                          <td>{{ transaction.id }}</td>
+                          <td>{{ transaction.amount }}</td>
+                          <td>{{ transaction.description }}</td>
+                          <td>{{ transaction.date | date }}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                <td>
+                    <button [routerLink]="['/beneficiaries', beneficiary.id]" class="btn btn-details">Afficher</button>
+                    <button [routerLink]="['/beneficiaries/update', beneficiary.id]" class="btn btn-update">Modifier</button>
+                    <button (click)="deleteBeneficiary(beneficiary.id)" class="btn btn-delete">Supprimer</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

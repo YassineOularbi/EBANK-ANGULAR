@@ -1,0 +1,89 @@
+/* Styling for the beneficiary list component */
+
+.beneficiary-list {
+    font-family: Arial, sans-serif;
+  }
+  
+  .beneficiary-list h2 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .beneficiary-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .beneficiary-list th, .beneficiary-list td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .beneficiary-list th {
+    background-color: #f2f2f2;
+  }
+  
+  .beneficiary-list .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  
+  .beneficiary-list .btn-details {
+    background-color: #2196F3;
+  }
+  
+  .beneficiary-list .btn-update {
+    background-color: #fdd835;
+  }
+  
+  .beneficiary-list .btn-delete {
+    background-color: #f44336;
+  }
+  
+  .beneficiary-list .btn:hover {
+    opacity: 0.8;
+  }
+  
+  .beneficiary-list .account-details {
+    margin-top: 10px;
+  }
+  
+  .beneficiary-list .account-details h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+  
+  .beneficiary-list .table-inner {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .beneficiary-list .table-inner th, .beneficiary-list .table-inner td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .beneficiary-list .table-inner th {
+    background-color: #f2f2f2;
+  }
+  
+  .beneficiary-list .table-inner td {
+    background-color: #fff;
+  }
+  
+  .beneficiary-list .table-inner td:first-child {
+    font-weight: bold;
+  }
+  
+  .beneficiary-list .table-inner tr:hover {
+    background-color: #f2f2f2;
+  }
+  

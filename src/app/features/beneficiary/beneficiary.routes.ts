@@ -1,14 +1,13 @@
 import { Routes } from '@angular/router';
 import { BeneficiaryListComponent } from './beneficiary-list/beneficiary-list.component';
 import { BeneficiaryDetailComponent } from './beneficiary-detail/beneficiary-detail.component';
-import { BeneficiaryAddComponent } from './beneficiary-add/beneficiary-add.component';
-import { BeneficiaryUpdateComponent } from './beneficiary-update/beneficiary-update.component';
+import { BeneficiaryAddEditComponent } from './beneficiary-add-edit/beneficiary-add-edit.component';
 import { authGuard } from '../../core/guards/auth.guard';
 
 
 export const beneficiaryRoutes: Routes = [
   {
-    path: 'beneficiaries/account/:id',
+    path: 'beneficiaries',
     component: BeneficiaryListComponent,
     canActivate: [authGuard]
   },
@@ -18,13 +17,13 @@ export const beneficiaryRoutes: Routes = [
     canActivate: [authGuard]
   },
   {
-    path: 'beneficiaries/add',
-    component: BeneficiaryAddComponent,
+    path: 'beneficiary/add',
+    component: BeneficiaryAddEditComponent,
     canActivate: [authGuard]
   },
   {
     path: 'beneficiaries/update/:id',
-    component: BeneficiaryUpdateComponent,
+    component: BeneficiaryAddEditComponent,
     canActivate: [authGuard]
   }
 ];
