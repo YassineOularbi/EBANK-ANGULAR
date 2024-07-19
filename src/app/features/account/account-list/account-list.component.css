@@ -1,0 +1,123 @@
+
+
+.account-list {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+/* Header styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    margin: 0;
+}
+
+/* Button styles */
+.btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 0 4px;
+}
+
+.btn-add {
+    background-color: #4CAF50; /* Green */
+}
+
+.btn-details {
+    background-color: #2196F3; /* Blue */
+}
+
+.btn-update {
+    background-color: #ff9800; /* Orange */
+}
+
+.btn-delete {
+    background-color: #f44336; /* Red */
+}
+
+.btn-close {
+    background-color: #9e9e9e; /* Grey */
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Inner table styles */
+.table-inner {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.table-inner th, .table-inner td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.table-inner th {
+    background-color: #e9e9e9;
+}
+
+.table-inner tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Account details container */
+.account-details {
+    margin-top: 20px;
+}
+
+.account-details h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Hide/Show account details */
+td[colspan="7"] {
+    padding: 0;
+}
+
+/* Styles for action buttons in inner tables */
+.table-inner td:last-child {
+    text-align: center;
+}
+
+/* Button styles in inner tables */
+.table-inner .btn {
+    margin: 2px;
+}

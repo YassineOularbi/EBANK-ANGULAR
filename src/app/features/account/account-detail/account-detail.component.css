@@ -1,0 +1,75 @@
+.account-details {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .account-info {
+    margin-bottom: 20px;
+  }
+  
+  .account-info p {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+  
+  .details-section {
+    margin-bottom: 20px;
+  }
+  
+  .details-section h3 {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #007bff;
+  }
+  
+  .details-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .details-table th,
+  .details-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .details-table th {
+    background-color: #f4f4f4;
+  }
+  
+  .actions {
+    margin-top: 20px;
+  }
+  
+  .actions button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  
+  .actions button:nth-child(1) {
+    background-color: #007bff; /* Blue */
+  }
+  
+  .actions button:nth-child(2) {
+    background-color: #dc3545; /* Red */
+  }
+  
+  .actions button:nth-child(3) {
+    background-color: #6c757d; /* Gray */
+  }
+  
+  .actions button:nth-child(4) {
+    background-color: #28a745; /* Green */
+  }
+  

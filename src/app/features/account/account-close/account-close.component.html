@@ -1,1 +1,15 @@
-<p>account-close works!</p>
+<div class="closing-container">
+    <h2>Fermeture de Compte</h2>
+    <form [formGroup]="closingForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="closingReason">Motif de Fermeture:</label>
+        <textarea id="closingReason" formControlName="closingReason" class="form-control" rows="4"></textarea>
+      </div>
+  
+      <div class="actions">
+        <button type="submit" class="btn btn-danger">Fermer le Compte</button>
+        <button type="button" class="btn btn-secondary">Annuler</button>
+      </div>
+    </form>
+  </div>
+  

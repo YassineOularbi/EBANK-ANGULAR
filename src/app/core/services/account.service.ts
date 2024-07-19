@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { AccountDto } from '../dtos/account.dto';
 import { AccountClosingDto } from '../dtos/account-closing.dto';
+import { Account } from '../models/account.model';
 
 @Injectable({
   providedIn: 'root'
@@ -13,13 +14,13 @@ export class AccountService {
   constructor(private httpClient: HttpClient) { }
 
   // Get account by ID
-  getById(id: string): Observable<AccountDto> {
-    return this.httpClient.get<AccountDto>(`${this.URL}get-by-id/${id}`);
+  getById(id: string): Observable<Account> {
+    return this.httpClient.get<Account>(`${this.URL}get-by-id/${id}`);
   }
 
   // Get all accounts by user ID
-  getAllByUser(userId: string): Observable<AccountDto[]> {
-    return this.httpClient.get<AccountDto[]>(`${this.URL}get-all-by-user/${userId}`);
+  getAllByUser(userId: string): Observable<Account[]> {
+    return this.httpClient.get<Account[]>(`${this.URL}get-all-by-user/${userId}`);
   }
 
   // Add a new account
@@ -33,8 +34,8 @@ export class AccountService {
   }
 
   // Delete an account by ID
-  delete(id: string): Observable<void> {
-    return this.httpClient.delete<void>(`${this.URL}delete/${id}`);
+  delete(id: string): Observable<AccountDto> {
+    return this.httpClient.delete<AccountDto>(`${this.URL}delete/${id}`);
   }
 
   // Close an account by ID

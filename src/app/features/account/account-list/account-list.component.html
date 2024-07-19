@@ -1,1 +1,95 @@
-<p>account-list works!</p>
+<div class="account-list">
+    <h2>Liste des Comptes</h2>
+    <button class="btn btn-add" [routerLink]="['/accounts/add']" >Ajouter un Compte</button>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Type</th>
+                <th>Solde</th>
+                <th>Date</th>
+                <th>IBAN</th>
+                <th>closed</th>
+                <th>lieés</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let account of accounts">
+                <td>{{ account.id }}</td>
+                <td>{{ account.type }}</td>
+                <td>{{ account.balance }}</td>
+                <td>{{ account.date | date }}</td>
+                <td>{{ account.iban }}</td>
+                <td>{{ account.isClosed }}</td>
+                <td>
+                    <div class="account-details">
+                        <h3>Cartes</h3>
+                        <table class="table-inner">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Numéro</th>
+                                    <th>Date d'Expiration</th>
+                                    <th>Activé</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let card of account.cards">
+                                    <td>{{ card.id }}</td>
+                                    <td>{{ card.number }}</td>
+                                    <td>{{ card.expirationDate | date }}</td>
+                                    <td>{{ card.isActivated ? 'Oui' : 'Non' }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h3>Bénéficiaires</h3>
+                        <table class="table-inner">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nom</th>
+                                    <th>IBAN</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let beneficiary of account.beneficiaries">
+                                    <td>{{ beneficiary.id }}</td>
+                                    <td>{{ beneficiary.name }}</td>
+                                    <td>{{ beneficiary.iban }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h3>Transactions</h3>
+                        <table class="table-inner">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Montant</th>
+                                    <th>Description</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let transaction of account.transactions">
+                                    <td>{{ transaction.id }}</td>
+                                    <td>{{ transaction.amount }}</td>
+                                    <td>{{ transaction.description }}</td>
+                                    <td>{{ transaction.date | date }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+                <td>
+                    <button [routerLink]="['/accounts', account.id]" class="btn btn-details" >Afficher</button>
+                    <button [routerLink]="['/accounts/update', account.id]" class="btn btn-update" >Modifier</button>
+                    <button (click)="deleteAccount(account.id)" class="btn btn-delete" >Supprimer</button>
+                    <button [routerLink]="['/accounts/close', account.id]" class="btn btn-close" >Fermer</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
