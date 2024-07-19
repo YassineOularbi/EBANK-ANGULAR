@@ -1,1 +1,25 @@
-<p>card-status works!</p>
+<!-- card-status.component.html -->
+<div class="card-status">
+    <h2>Mise à Jour du Statut de la Carte</h2>
+    <form [formGroup]="statusForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="isActivated">Statut de la Carte:</label>
+            <div class="toggle-switch">
+                <input 
+                    type="checkbox" 
+                    id="isActivated" 
+                    formControlName="isActivated"
+                    class="toggle-input"
+                />
+                <label class="toggle-label" for="isActivated">
+                    <span class="toggle-slider"></span>
+                </label>
+                <span>{{ statusForm.value.isActivated ? 'Activé' : 'Désactivé' }}</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Mettre à Jour</button>
+        </div>
+    </form>
+    <button class="btn btn-secondary">Retour</button>
+</div>

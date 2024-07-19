@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { CardDto } from '../dtos/card.dto';
 import { CardBlockingDto } from '../dtos/card-blocking.dto';
 import { CardStatusDto } from '../dtos/card-status.dto';
+import { Card } from '../models/card.model';
 
 @Injectable({
   providedIn: 'root'
@@ -14,13 +15,13 @@ export class CardService {
   constructor(private httpClient: HttpClient) {}
 
   // Get all cards by account ID
-  getAllByAccount(id: string): Observable<CardDto[]> {
-    return this.httpClient.get<CardDto[]>(`${this.URL}get-cards-by-account/${id}`);
+  getAllByAccount(id: string): Observable<Card[]> {
+    return this.httpClient.get<Card[]>(`${this.URL}get-cards-by-account/${id}`);
   }
 
   // Get card by ID
-  getById(id: string): Observable<CardDto> {
-    return this.httpClient.get<CardDto>(`${this.URL}get-by-id/${id}`);
+  getById(id: string): Observable<Card> {
+    return this.httpClient.get<Card>(`${this.URL}get-by-id/${id}`);
   }
 
   // Add a new card

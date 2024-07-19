@@ -24,12 +24,12 @@ export const cardRoutes: Routes = [
     canActivate: [authGuard]
   },
   {
-    path: 'cards/:id/block',
+    path: 'cards/block/:id',
     component: CardBlockComponent,
     canActivate: [authGuard]
   },
   {
-    path: 'cards/:id/activate-deactivate',
+    path: 'cards/status/:id',
     component: CardStatusComponent,
     canActivate: [authGuard]
   }

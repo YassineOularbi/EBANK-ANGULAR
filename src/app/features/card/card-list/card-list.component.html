@@ -1,1 +1,54 @@
-<p>card-list works!</p>
+<div class="card-list-container">
+    <h2>Liste des Cartes</h2>
+    <button [routerLink]="['/cards/add']" class="btn btn-primary add-card-btn">Ajouter une Carte</button>
+    
+    <table class="card-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Numéro</th>
+          <th>Type</th>
+          <th>Niveau</th>
+          <th>Réseau</th>
+          <th>Transactions</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let card of cards">
+          <td>{{ card.id }}</td>
+          <td>{{ card.number }}</td>
+          <td>{{ card.type }}</td>
+          <td>{{ card.tier }}</td>
+          <td>{{ card.network }}</td>
+          <td>
+            <table class="transaction-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Montant</th>
+                  <th>Description</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let transaction of card.transactions">
+                  <td>{{ transaction.id }}</td>
+                  <td>{{ transaction.amount }}</td>
+                  <td>{{ transaction.description }}</td>
+                  <td>{{ transaction.date | date }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+          <td>
+            <button [routerLink]="['/cards', card.id]" class="btn btn-info">Détails</button>
+            <button [routerLink]="['/cards/block', card.id]" class="btn btn-warning">Bloquer</button>
+            <button [routerLink]="['/cards/status', card.id]" class="btn btn-secondary">Changer Status</button>
+            <button (click)="deleteCard(card.id)" class="btn btn-danger">Supprimer</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

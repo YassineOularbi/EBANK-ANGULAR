@@ -1,1 +1,55 @@
-<p>card-detail works!</p>
+<!-- card-detail.component.html -->
+<div class="card-detail" *ngIf="card">
+    <h2>Détails de la Carte</h2>
+    <div>
+        <label>ID: </label>{{ card.id }}
+    </div>
+    <div>
+        <label>Numéro: </label>{{ card.number }}
+    </div>
+    <div>
+        <label>Type: </label>{{ card.type }}
+    </div>
+    <div>
+        <label>Niveau: </label>{{ card.tier }}
+    </div>
+    <div>
+        <label>Réseau: </label>{{ card.network }}
+    </div>
+    <div>
+        <label>Activé: </label>{{ card.isActivated ? 'Oui' : 'Non' }}
+    </div>
+    <div>
+        <label>Bloqué: </label>{{ card.isBlocked ? 'Oui' : 'Non' }}
+    </div>
+    <div>
+        <label>Raison de Blocage: </label>{{ card.blockingReason || 'N/A' }}
+    </div>
+    <div>
+        <label>Date d'Expiration: </label>{{ card.expirationDate | date }}
+    </div>
+    
+    <div>
+        <h3>Transactions Associées</h3>
+        <table class="transaction-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Montant</th>
+                    <th>Description</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let transaction of card.transactions">
+                    <td>{{ transaction.id }}</td>
+                    <td>{{ transaction.amount }}</td>
+                    <td>{{ transaction.description }}</td>
+                    <td>{{ transaction.date | date }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <button >Retour</button>
+</div>
