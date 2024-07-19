@@ -1,37 +1,37 @@
 import { AccountType } from '../enums/account-type.enum';
 
 export class AccountDto {
-    private type: AccountType;
-    private balance: number;
-    private user_id: number;
+    private _type: AccountType;
+    private _balance: number;
+    private _user_id: number;
 
     constructor(type: AccountType, balance: number, user_id: number) {
-        this.type = type;
-        this.balance = balance;
-        this.user_id = user_id;
+        this._type = type;
+        this._balance = balance;
+        this._user_id = user_id;
     }
 
-    getType(): AccountType {
-        return this.type;
+    get type(): AccountType {
+        return this._type;
     }
 
-    setType(type: AccountType): void {
-        this.type = type;
+    set type(type: AccountType) {
+        this._type = type;
     }
 
-    getBalance(): number {
-        return this.balance;
+    get balance(): number {
+        return this._balance;
     }
 
-    setBalance(balance: number): void {
-        this.balance = balance;
+    set balance(balance: number) {
+        this._balance = balance;
     }
 
-    getUserId(): number {
-        return this.user_id;
+    get user_id(): number {
+        return this._user_id;
     }
 
-    setUserId(user_id: number): void {
-        this.user_id = user_id;
+    set user_id(user_id: number) {
+        this._user_id = user_id;
     }
 }

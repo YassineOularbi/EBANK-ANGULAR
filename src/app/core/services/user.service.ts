@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { UserDto } from '../dtos/user.dto';
+import { User } from '../models/user.model';
 
 @Injectable({
   providedIn: 'root'
@@ -12,13 +13,13 @@ export class UserService {
   constructor(private httpClient: HttpClient) { }
 
   // Get all users
-  getAll(): Observable<UserDto[]> {
-    return this.httpClient.get<UserDto[]>(`${this.URL}get-all`);
+  getAll(): Observable<User[]> {
+    return this.httpClient.get<User[]>(`${this.URL}get-all`);
   }
 
   // Get user by ID
-  getById(id: string): Observable<UserDto> {
-    return this.httpClient.get<UserDto>(`${this.URL}get-by-id/${id}`);
+  getById(id: string): Observable<User> {
+    return this.httpClient.get<User>(`${this.URL}get-by-id/${id}`);
   }
 
   // Add a new user

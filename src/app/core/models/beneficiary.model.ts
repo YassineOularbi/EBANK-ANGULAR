@@ -2,12 +2,12 @@ import { Account } from "./account.model";
 import { Transaction } from "./transaction.model";
 
 export class Beneficiary {
-    private id: number;
-    private name: string;
-    private iban: string;
-    private bank: string;
-    private account: Account;
-    private transactions: Transaction[];
+    private _id: number;
+    private _name: string;
+    private _iban: string;
+    private _bank: string;
+    private _account: Account;
+    private _transactions: Transaction[];
 
     constructor(
         id: number,
@@ -17,59 +17,59 @@ export class Beneficiary {
         account: Account,
         transactions: Transaction[]
     ) {
-        this.id = id;
-        this.name = name;
-        this.iban = iban;
-        this.bank = bank;
-        this.account = account;
-        this.transactions = transactions;
+        this._id = id;
+        this._name = name;
+        this._iban = iban;
+        this._bank = bank;
+        this._account = account;
+        this._transactions = transactions;
     }
 
-    getId(): number {
-        return this.id;
+    get id(): number {
+        return this._id;
     }
 
-    setId(id: number): void {
-        this.id = id;
+    set id(id: number) {
+        this._id = id;
     }
 
-    getName(): string {
-        return this.name;
+    get name(): string {
+        return this._name;
     }
 
-    setName(name: string): void {
-        this.name = name;
+    set name(name: string) {
+        this._name = name;
     }
 
-    getIban(): string {
-        return this.iban;
+    get iban(): string {
+        return this._iban;
     }
 
-    setIban(iban: string): void {
-        this.iban = iban;
+    set iban(iban: string) {
+        this._iban = iban;
     }
 
-    getBank(): string {
-        return this.bank;
+    get bank(): string {
+        return this._bank;
     }
 
-    setBank(bank: string): void {
-        this.bank = bank;
+    set bank(bank: string) {
+        this._bank = bank;
     }
 
-    getAccount(): Account {
-        return this.account;
+    get account(): Account {
+        return this._account;
     }
 
-    setAccount(account: Account): void {
-        this.account = account;
+    set account(account: Account) {
+        this._account = account;
     }
 
-    getTransactions(): Transaction[] {
-        return this.transactions;
+    get transactions(): Transaction[] {
+        return this._transactions;
     }
 
-    setTransactions(transactions: Transaction[]): void {
-        this.transactions = transactions;
+    set transactions(transactions: Transaction[]) {
+        this._transactions = transactions;
     }
 }

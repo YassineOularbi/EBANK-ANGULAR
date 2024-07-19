@@ -7,18 +7,18 @@ import { Card } from "./card.model";
 import { Time } from "@angular/common";
 
 export class Transaction {
-    private id: number;
-    private amount: number;
-    private date: Date;
-    private time: Time;
-    private description: string;
-    private type: TransactionType;
-    private context: TransactionContext;
-    private method: TransactionMethod;
-    private account: Account;
-    private internalAccount: Account;
-    private beneficiary: Beneficiary;
-    private card: Card;
+    private _id: number;
+    private _amount: number;
+    private _date: Date;
+    private _time: Time;
+    private _description: string;
+    private _type: TransactionType;
+    private _context: TransactionContext;
+    private _method: TransactionMethod;
+    private _account: Account;
+    private _internalAccount: Account;
+    private _beneficiary: Beneficiary;
+    private _card: Card;
 
     constructor(
         id: number,
@@ -34,113 +34,113 @@ export class Transaction {
         beneficiary: Beneficiary,
         card: Card
     ) {
-        this.id = id;
-        this.amount = amount;
-        this.date = date;
-        this.time = time;
-        this.description = description;
-        this.type = type;
-        this.context = context;
-        this.method = method;
-        this.account = account;
-        this.internalAccount = internalAccount;
-        this.beneficiary = beneficiary;
-        this.card = card;
+        this._id = id;
+        this._amount = amount;
+        this._date = date;
+        this._time = time;
+        this._description = description;
+        this._type = type;
+        this._context = context;
+        this._method = method;
+        this._account = account;
+        this._internalAccount = internalAccount;
+        this._beneficiary = beneficiary;
+        this._card = card;
     }
 
-    getId(): number {
-        return this.id;
+    get id(): number {
+        return this._id;
     }
 
-    setId(id: number): void {
-        this.id = id;
+    set id(id: number) {
+        this._id = id;
     }
 
-    getAmount(): number {
-        return this.amount;
+    get amount(): number {
+        return this._amount;
     }
 
-    setAmount(amount: number): void {
-        this.amount = amount;
+    set amount(amount: number) {
+        this._amount = amount;
     }
 
-    getDate(): Date {
-        return this.date;
+    get date(): Date {
+        return this._date;
     }
 
-    setDate(date: Date): void {
-        this.date = date;
+    set date(date: Date) {
+        this._date = date;
     }
 
-    getTime(): Time {
-        return this.time;
+    get time(): Time {
+        return this._time;
     }
 
-    setTime(time: Time): void {
-        this.time = time;
+    set time(time: Time) {
+        this._time = time;
     }
 
-    getDescription(): string {
-        return this.description;
+    get description(): string {
+        return this._description;
     }
 
-    setDescription(description: string): void {
-        this.description = description;
+    set description(description: string) {
+        this._description = description;
     }
 
-    getType(): TransactionType {
-        return this.type;
+    get type(): TransactionType {
+        return this._type;
     }
 
-    setType(type: TransactionType): void {
-        this.type = type;
+    set type(type: TransactionType) {
+        this._type = type;
     }
 
-    getContext(): TransactionContext {
-        return this.context;
+    get context(): TransactionContext {
+        return this._context;
     }
 
-    setContext(context: TransactionContext): void {
-        this.context = context;
+    set context(context: TransactionContext) {
+        this._context = context;
     }
 
-    getMethod(): TransactionMethod {
-        return this.method;
+    get method(): TransactionMethod {
+        return this._method;
     }
 
-    setMethod(method: TransactionMethod): void {
-        this.method = method;
+    set method(method: TransactionMethod) {
+        this._method = method;
     }
 
-    getAccount(): Account {
-        return this.account;
+    get account(): Account {
+        return this._account;
     }
 
-    setAccount(account: Account): void {
-        this.account = account;
+    set account(account: Account) {
+        this._account = account;
     }
 
-    getInternalAccount(): Account {
-        return this.internalAccount;
+    get internalAccount(): Account {
+        return this._internalAccount;
     }
 
-    setInternalAccount(internalAccount: Account): void {
-        this.internalAccount = internalAccount;
+    set internalAccount(internalAccount: Account) {
+        this._internalAccount = internalAccount;
     }
 
-    getBeneficiary(): Beneficiary {
-        return this.beneficiary;
+    get beneficiary(): Beneficiary {
+        return this._beneficiary;
     }
 
-    setBeneficiary(beneficiary: Beneficiary): void {
-        this.beneficiary = beneficiary;
+    set beneficiary(beneficiary: Beneficiary) {
+        this._beneficiary = beneficiary;
     }
 
-    getCard(): Card {
-        return this.card;
+    get card(): Card {
+        return this._card;
     }
 
-    setCard(card: Card): void {
-        this.card = card;
+    set card(card: Card) {
+        this._card = card;
     }
 }

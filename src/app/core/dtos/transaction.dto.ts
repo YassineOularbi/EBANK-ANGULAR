@@ -1,37 +1,37 @@
 import { TransactionMethod } from '../enums/transaction-method.enum';
 
 export class TransactionDto {
-    private amount: number;
-    private description: string;
-    private method: TransactionMethod;
+    private _amount: number;
+    private _description: string;
+    private _method: TransactionMethod;
 
     constructor(amount: number, description: string, method: TransactionMethod) {
-        this.amount = amount;
-        this.description = description;
-        this.method = method;
+        this._amount = amount;
+        this._description = description;
+        this._method = method;
     }
 
-    getAmount(): number {
-        return this.amount;
+    get amount(): number {
+        return this._amount;
     }
 
-    setAmount(amount: number): void {
-        this.amount = amount;
+    set amount(amount: number) {
+        this._amount = amount;
     }
 
-    getDescription(): string {
-        return this.description;
+    get description(): string {
+        return this._description;
     }
 
-    setDescription(description: string): void {
-        this.description = description;
+    set description(description: string) {
+        this._description = description;
     }
 
-    getMethod(): TransactionMethod {
-        return this.method;
+    get method(): TransactionMethod {
+        return this._method;
     }
 
-    setMethod(method: TransactionMethod): void {
-        this.method = method;
+    set method(method: TransactionMethod) {
+        this._method = method;
     }
 }

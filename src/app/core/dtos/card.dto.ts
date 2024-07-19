@@ -3,52 +3,52 @@ import { CardType } from "../enums/card-type.enum";
 import { NetworkType } from "../enums/network-type.enum";
 
 export class CardDto {
-    private type: CardType;
-    private tier: CardTier;
-    private network: NetworkType;
-    private account_id: number;
+    private _type: CardType;
+    private _tier: CardTier;
+    private _network: NetworkType;
+    private _account_id: number;
 
     constructor(
         type: CardType,
         tier: CardTier,
         network: NetworkType,
         account_id: number,
-    ){
-        this.type = type;
-        this.tier = tier;
-        this.network = network;
-        this.account_id = account_id;
+    ) {
+        this._type = type;
+        this._tier = tier;
+        this._network = network;
+        this._account_id = account_id;
     }
 
-    getType(): CardType {
-        return this.type;
-      }
+    get type(): CardType {
+        return this._type;
+    }
     
-      setType(type: CardType): void {
-        this.type = type;
-      }
+    set type(type: CardType) {
+        this._type = type;
+    }
     
-      getTier(): CardTier {
-        return this.tier;
-      }
+    get tier(): CardTier {
+        return this._tier;
+    }
     
-      setTier(tier: CardTier): void {
-        this.tier = tier;
-      }
+    set tier(tier: CardTier) {
+        this._tier = tier;
+    }
     
-      getNetwork(): NetworkType {
-        return this.network;
-      }
+    get network(): NetworkType {
+        return this._network;
+    }
     
-      setNetwork(network: NetworkType): void {
-        this.network = network;
-      }
+    set network(network: NetworkType) {
+        this._network = network;
+    }
     
-      getAccount(): number {
-        return this.account_id;
-      }
+    get account_id(): number {
+        return this._account_id;
+    }
     
-      setAccount(account_id: number): void {
-        this.account_id = account_id;
-      }
+    set account_id(account_id: number) {
+        this._account_id = account_id;
+    }
 }

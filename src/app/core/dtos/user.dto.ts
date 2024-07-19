@@ -1,55 +1,55 @@
 export class UserDto {
-    private name: string;
-    private mail: string;
-    private username: string;
-    private password: string;
-    private phone: string;
+    private _name: string;
+    private _mail: string;
+    private _username: string;
+    private _password: string;
+    private _phone: string;
 
-    constructor(name: string, mail: string, username: string, password: string, phone: string){
-        this.name = name;
-        this.mail = mail;
-        this.username = username;
-        this.password = password;
-        this.phone = phone;
+    constructor(name: string, mail: string, username: string, password: string, phone: string) {
+        this._name = name;
+        this._mail = mail;
+        this._username = username;
+        this._password = password;
+        this._phone = phone;
     }
 
-    getName() {
-        return this.name;
+    get name(): string {
+        return this._name;
     }
 
-    getUsername() {
-        return this.username;
+    set name(name: string) {
+        this._name = name;
     }
 
-    getPassword() {
-        return this.password;
+    get mail(): string {
+        return this._mail;
     }
 
-    getMail() {
-        return this.mail;
+    set mail(mail: string) {
+        this._mail = mail;
     }
 
-    getPhone() {
-        return this.phone;
+    get username(): string {
+        return this._username;
     }
 
-    setName(name: string) {
-        this.name = name;
+    set username(username: string) {
+        this._username = username;
     }
 
-    setUsername(username: string) {
-        this.username = username;
+    get password(): string {
+        return this._password;
     }
 
-    setPassword(password: string) {
-        this.password = password;
+    set password(password: string) {
+        this._password = password;
     }
 
-    setMail(mail: string) {
-        this.mail = mail;
+    get phone(): string {
+        return this._phone;
     }
 
-    setPhone(phone: string) {
-        this.phone = phone;
+    set phone(phone: string) {
+        this._phone = phone;
     }
 }

@@ -1,15 +1,15 @@
 export class CardBlockingDto {
-    private blockingReason: string;
+    private _blockingReason: string;
 
     constructor(blockingReason: string) {
-        this.blockingReason = blockingReason;
+        this._blockingReason = blockingReason;
     }
 
-    getBlockingReason(): string {
-        return this.blockingReason;
+    get blockingReason(): string {
+        return this._blockingReason;
     }
 
-    setBlockingReason(blockingReason: string): void {
-        this.blockingReason = blockingReason;
+    set blockingReason(blockingReason: string) {
+        this._blockingReason = blockingReason;
     }
 }

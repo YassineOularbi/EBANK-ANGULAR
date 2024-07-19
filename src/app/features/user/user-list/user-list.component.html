@@ -1,1 +1,51 @@
-<p>user-list works!</p>
+<!-- user-list.component.html -->
+<div class="user-list">
+    <h2>Liste des Utilisateurs</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nom</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Téléphone</th>
+          <th>Comptes</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.id }}</td>
+          <td>{{ user.name }}</td>
+          <td>{{ user.username }}</td>
+          <td>{{ user.mail }}</td>
+          <td>{{ user.phone }}</td>
+          <td>
+            <table class="table-inner">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Type</th>
+                  <th>Balance</th>
+                  <th>IBAN</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let account of user.accounts">
+                  <td>{{ account.id }}</td>
+                  <td>{{ account.type }}</td>
+                  <td>{{ account.balance }}</td>
+                  <td>{{ account.iban }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+          <td>
+            <button [routerLink]="['/users/update', user.id]" class="btn btn-edit">Modifier</button>
+            <button (click)="deleteUser(user.id)" class="btn btn-delete">Supprimer</button>
+            <button [routerLink]="['/users', user.id]" class="btn btn-add">voir les details</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</div>

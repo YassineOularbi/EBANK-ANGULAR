@@ -1,77 +1,77 @@
 import { Account } from "./account.model";
 
 export class User {
-    private id: number;
-    private name: string;
-    private username: string;
-    private password: string;
-    private mail: string;
-    private phone: string;
-    private accounts: Account[];
+    private _id: number;
+    private _name: string;
+    private _username: string;
+    private _password: string;
+    private _mail: string;
+    private _phone: string;
+    private _accounts: Account[];
 
     constructor(id: number, name: string, username: string, password: string, mail: string, phone: string, accounts: Account[]) {
-        this.id = id;
-        this.name = name;
-        this.username = username;
-        this.password = password;
-        this.mail = mail;
-        this.phone = phone;
-        this.accounts = accounts;
+        this._id = id;
+        this._name = name;
+        this._username = username;
+        this._password = password;
+        this._mail = mail;
+        this._phone = phone;
+        this._accounts = accounts;
     }
 
-    getId(): number {
-        return this.id;
+    get id(): number {
+        return this._id;
     }
 
-    getName(): string {
-        return this.name;
+    get name(): string {
+        return this._name;
     }
 
-    getUsername(): string {
-        return this.username;
+    get username(): string {
+        return this._username;
     }
 
-    getPassword(): string {
-        return this.password;
+    get password(): string {
+        return this._password;
     }
 
-    getMail(): string {
-        return this.mail;
+    get mail(): string {
+        return this._mail;
     }
 
-    getPhone(): string {
-        return this.phone;
+    get phone(): string {
+        return this._phone;
     }
 
-    getAccounts(): Account[] {
-        return this.accounts;
+    get accounts(): Account[] {
+        return this._accounts;
     }
 
-    setId(id: number): void {
-        this.id = id;
+    set id(id: number) {
+        this._id = id;
     }
 
-    setName(name: string): void {
-        this.name = name;
+    set name(name: string) {
+        this._name = name;
     }
 
-    setUsername(username: string): void {
-        this.username = username;
+    set username(username: string) {
+        this._username = username;
     }
 
-    setPassword(password: string): void {
-        this.password = password;
+    set password(password: string) {
+        this._password = password;
     }
 
-    setMail(mail: string): void {
-        this.mail = mail;
+    set mail(mail: string) {
+        this._mail = mail;
     }
 
-    setPhone(phone: string): void {
-        this.phone = phone;
+    set phone(phone: string) {
+        this._phone = phone;
     }
 
-    setAccounts(accounts: Account[]): void {
-        this.accounts = accounts;
+    set accounts(accounts: Account[]) {
+        this._accounts = accounts;
     }
 }

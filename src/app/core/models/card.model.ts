@@ -4,20 +4,19 @@ import { NetworkType } from '../enums/network-type.enum';
 import { Account } from './account.model';
 import { Transaction } from './transaction.model';
 
-
 export class Card {
-  private id: number;
-  private number: number;
-  private cvv: number;
-  private expirationDate: Date;
-  private isActivated: boolean;
-  private isBlocked: boolean;
-  private blockingReason: string;
-  private type: CardType;
-  private tier: CardTier;
-  private network: NetworkType;
-  private account: Account;
-  private transactions: Transaction[];
+  private _id: number;
+  private _number: number;
+  private _cvv: number;
+  private _expirationDate: Date;
+  private _isActivated: boolean;
+  private _isBlocked: boolean;
+  private _blockingReason: string;
+  private _type: CardType;
+  private _tier: CardTier;
+  private _network: NetworkType;
+  private _account: Account;
+  private _transactions: Transaction[];
 
   constructor(
     id: number,
@@ -33,113 +32,113 @@ export class Card {
     account: Account,
     transactions: Transaction[]
   ) {
-    this.id = id;
-    this.number = number;
-    this.cvv = cvv;
-    this.expirationDate = expirationDate;
-    this.isActivated = isActivated;
-    this.isBlocked = isBlocked;
-    this.blockingReason = blockingReason;
-    this.type = type;
-    this.tier = tier;
-    this.network = network;
-    this.account = account;
-    this.transactions = transactions;
+    this._id = id;
+    this._number = number;
+    this._cvv = cvv;
+    this._expirationDate = expirationDate;
+    this._isActivated = isActivated;
+    this._isBlocked = isBlocked;
+    this._blockingReason = blockingReason;
+    this._type = type;
+    this._tier = tier;
+    this._network = network;
+    this._account = account;
+    this._transactions = transactions;
   }
 
-  getId(): number {
-    return this.id;
+  get id(): number {
+    return this._id;
   }
 
-  setId(id: number): void {
-    this.id = id;
+  set id(id: number) {
+    this._id = id;
   }
 
-  getNumber(): number {
-    return this.number;
+  get number(): number {
+    return this._number;
   }
 
-  setNumber(number: number): void {
-    this.number = number;
+  set number(number: number) {
+    this._number = number;
   }
 
-  getCvv(): number {
-    return this.cvv;
+  get cvv(): number {
+    return this._cvv;
   }
 
-  setCvv(cvv: number): void {
-    this.cvv = cvv;
+  set cvv(cvv: number) {
+    this._cvv = cvv;
   }
 
-  getExpirationDate(): Date {
-    return this.expirationDate;
+  get expirationDate(): Date {
+    return this._expirationDate;
   }
 
-  setExpirationDate(expirationDate: Date): void {
-    this.expirationDate = expirationDate;
+  set expirationDate(expirationDate: Date) {
+    this._expirationDate = expirationDate;
   }
 
-  getIsActivated(): boolean {
-    return this.isActivated;
+  get isActivated(): boolean {
+    return this._isActivated;
   }
 
-  setIsActivated(isActivated: boolean): void {
-    this.isActivated = isActivated;
+  set isActivated(isActivated: boolean) {
+    this._isActivated = isActivated;
   }
 
-  getIsBlocked(): boolean {
-    return this.isBlocked;
+  get isBlocked(): boolean {
+    return this._isBlocked;
   }
 
-  setIsBlocked(isBlocked: boolean): void {
-    this.isBlocked = isBlocked;
+  set isBlocked(isBlocked: boolean) {
+    this._isBlocked = isBlocked;
   }
 
-  getBlockingReason(): string {
-    return this.blockingReason;
+  get blockingReason(): string {
+    return this._blockingReason;
   }
 
-  setBlockingReason(blockingReason: string): void {
-    this.blockingReason = blockingReason;
+  set blockingReason(blockingReason: string) {
+    this._blockingReason = blockingReason;
   }
 
-  getType(): CardType {
-    return this.type;
+  get type(): CardType {
+    return this._type;
   }
 
-  setType(type: CardType): void {
-    this.type = type;
+  set type(type: CardType) {
+    this._type = type;
   }
 
-  getTier(): CardTier {
-    return this.tier;
+  get tier(): CardTier {
+    return this._tier;
   }
 
-  setTier(tier: CardTier): void {
-    this.tier = tier;
+  set tier(tier: CardTier) {
+    this._tier = tier;
   }
 
-  getNetwork(): NetworkType {
-    return this.network;
+  get network(): NetworkType {
+    return this._network;
   }
 
-  setNetwork(network: NetworkType): void {
-    this.network = network;
+  set network(network: NetworkType) {
+    this._network = network;
   }
 
-  getAccount(): Account {
-    return this.account;
+  get account(): Account {
+    return this._account;
   }
 
-  setAccount(account: Account): void {
-    this.account = account;
+  set account(account: Account) {
+    this._account = account;
   }
 
-  getTransactions(): Transaction[] {
-    return this.transactions;
+  get transactions(): Transaction[] {
+    return this._transactions;
   }
 
-  setTransactions(transactions: Transaction[]): void {
-    this.transactions = transactions;
+  set transactions(transactions: Transaction[]) {
+    this._transactions = transactions;
   }
 }

@@ -1,1 +1,42 @@
-<p>user-detail works!</p>
+<!-- user-detail.component.html -->
+<div class="user-detail" *ngIf="user">
+    <h2>Détails de l'Utilisateur</h2>
+    <div>
+      <label>ID: </label>{{ user.id }}
+    </div>
+    <div>
+      <label>Nom: </label>{{ user.name }}
+    </div>
+    <div>
+      <label>Username: </label>{{ user.username }}
+    </div>
+    <div>
+      <label>Email: </label>{{ user.mail }}
+    </div>
+    <div>
+      <label>Téléphone: </label>{{ user.phone }}
+    </div>
+    <div>
+      <h3>Comptes</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Type</th>
+            <th>Balance</th>
+            <th>IBAN</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let account of user.accounts">
+            <td>{{ account.id }}</td>
+            <td>{{ account.type }}</td>
+            <td>{{ account.balance }}</td>
+            <td>{{ account.iban }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <button [routerLink]="['users']">Retour</button>
+  </div>
+  

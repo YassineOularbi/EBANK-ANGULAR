@@ -5,17 +5,17 @@ import { Transaction } from "./transaction.model";
 import { User } from "./user.model";
 
 export class Account {
-    private id: number;
-    private type: AccountType;
-    private balance: number;
-    private date: Date;
-    private iban: string;
-    private isClosed: boolean;
-    private closingReason: string;
-    private user: User;
-    private cards: Card[];
-    private transactions: Transaction[];
-    private beneficiaries: Beneficiary[];
+    private _id: number;
+    private _type: AccountType;
+    private _balance: number;
+    private _date: Date;
+    private _iban: string;
+    private _isClosed: boolean;
+    private _closingReason: string;
+    private _user: User;
+    private _cards: Card[];
+    private _transactions: Transaction[];
+    private _beneficiaries: Beneficiary[];
 
     constructor(
         id: number,
@@ -30,104 +30,104 @@ export class Account {
         transactions: Transaction[],
         beneficiaries: Beneficiary[]
     ) {
-        this.id = id;
-        this.type = type;
-        this.balance = balance;
-        this.date = date;
-        this.iban = iban;
-        this.isClosed = isClosed;
-        this.closingReason = closingReason;
-        this.user = user;
-        this.cards = cards;
-        this.transactions = transactions;
-        this.beneficiaries = beneficiaries;
+        this._id = id;
+        this._type = type;
+        this._balance = balance;
+        this._date = date;
+        this._iban = iban;
+        this._isClosed = isClosed;
+        this._closingReason = closingReason;
+        this._user = user;
+        this._cards = cards;
+        this._transactions = transactions;
+        this._beneficiaries = beneficiaries;
     }
 
-    getId(): number {
-        return this.id;
+    get id(): number {
+        return this._id;
     }
 
-    setId(id: number): void {
-        this.id = id;
+    set id(id: number) {
+        this._id = id;
     }
 
-    getType(): AccountType {
-        return this.type;
+    get type(): AccountType {
+        return this._type;
     }
 
-    setType(type: AccountType): void {
-        this.type = type;
+    set type(type: AccountType) {
+        this._type = type;
     }
 
-    getBalance(): number {
-        return this.balance;
+    get balance(): number {
+        return this._balance;
     }
 
-    setBalance(balance: number): void {
-        this.balance = balance;
+    set balance(balance: number) {
+        this._balance = balance;
     }
 
-    getDate(): Date {
-        return this.date;
+    get date(): Date {
+        return this._date;
     }
 
-    setDate(date: Date): void {
-        this.date = date;
+    set date(date: Date) {
+        this._date = date;
     }
 
-    getIban(): string {
-        return this.iban;
+    get iban(): string {
+        return this._iban;
     }
 
-    setIban(iban: string): void {
-        this.iban = iban;
+    set iban(iban: string) {
+        this._iban = iban;
     }
 
-    getIsClosed(): boolean {
-        return this.isClosed;
+    get isClosed(): boolean {
+        return this._isClosed;
     }
 
-    setIsClosed(isClosed: boolean): void {
-        this.isClosed = isClosed;
+    set isClosed(isClosed: boolean) {
+        this._isClosed = isClosed;
     }
 
-    getClosingReason(): string {
-        return this.closingReason;
+    get closingReason(): string {
+        return this._closingReason;
     }
 
-    setClosingReason(closingReason: string): void {
-        this.closingReason = closingReason;
+    set closingReason(closingReason: string) {
+        this._closingReason = closingReason;
     }
 
-    getUser(): User {
-        return this.user;
+    get user(): User {
+        return this._user;
     }
 
-    setUser(user: User): void {
-        this.user = user;
+    set user(user: User) {
+        this._user = user;
     }
 
-    getCards(): Card[] {
-        return this.cards;
+    get cards(): Card[] {
+        return this._cards;
     }
 
-    setCards(cards: Card[]): void {
-        this.cards = cards;
+    set cards(cards: Card[]) {
+        this._cards = cards;
     }
 
-    getTransactions(): Transaction[] {
-        return this.transactions;
+    get transactions(): Transaction[] {
+        return this._transactions;
     }
 
-    setTransactions(transactions: Transaction[]): void {
-        this.transactions = transactions;
+    set transactions(transactions: Transaction[]) {
+        this._transactions = transactions;
     }
 
-    getBeneficiaries(): Beneficiary[] {
-        return this.beneficiaries;
+    get beneficiaries(): Beneficiary[] {
+        return this._beneficiaries;
     }
 
-    setBeneficiaries(beneficiaries: Beneficiary[]): void {
-        this.beneficiaries = beneficiaries;
+    set beneficiaries(beneficiaries: Beneficiary[]) {
+        this._beneficiaries = beneficiaries;
     }
 }

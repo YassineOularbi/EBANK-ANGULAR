@@ -1,15 +1,15 @@
 export class AccountClosingDto {
-    private closingReason: string;
+    private _closingReason: string;
 
     constructor(closingReason: string) {
-        this.closingReason = closingReason;
+        this._closingReason = closingReason;
     }
 
-    getClosingReason(): string {
-        return this.closingReason;
+    get closingReason(): string {
+        return this._closingReason;
     }
 
-    setClosingReason(closingReason: string): void {
-        this.closingReason = closingReason;
+    set closingReason(closingReason: string) {
+        this._closingReason = closingReason;
     }
 }

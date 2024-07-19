@@ -1,15 +1,15 @@
 export class CardStatusDto {
-    private isActivated: boolean;
+    private _isActivated: boolean;
 
     constructor(isActivated: boolean) {
-        this.isActivated = isActivated;
+        this._isActivated = isActivated;
     }
 
-    getIsActivated(): boolean {
-        return this.isActivated;
+    get isActivated(): boolean {
+        return this._isActivated;
     }
 
-    setIsActivated(isActivated: boolean): void {
-        this.isActivated = isActivated;
+    set isActivated(isActivated: boolean) {
+        this._isActivated = isActivated;
     }
 }

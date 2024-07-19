@@ -1,0 +1,68 @@
+/* user-detail.component.css */
+
+.user-detail {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .user-detail h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .user-detail div {
+    margin-bottom: 10px;
+  }
+  
+  .user-detail label {
+    font-weight: bold;
+    display: inline-block;
+    width: 120px;
+  }
+  
+  .user-detail table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .user-detail table, 
+  .user-detail th, 
+  .user-detail td {
+    border: 1px solid #ccc;
+  }
+  
+  .user-detail th, 
+  .user-detail td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .user-detail th {
+    background-color: #f2f2f2;
+  }
+  
+  .user-detail tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .user-detail button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .user-detail button:hover {
+    background-color: #0056b3;
+  }
+  

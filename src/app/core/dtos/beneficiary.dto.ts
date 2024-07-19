@@ -1,45 +1,45 @@
 export class BeneficiaryDto {
-    private name: string;
-    private iban: string;
-    private bank: string;
-    private account_id: number;
+    private _name: string;
+    private _iban: string;
+    private _bank: string;
+    private _account_id: number;
 
     constructor(name: string, iban: string, bank: string, account_id: number) {
-        this.name = name;
-        this.iban = iban;
-        this.bank = bank;
-        this.account_id = account_id;
+        this._name = name;
+        this._iban = iban;
+        this._bank = bank;
+        this._account_id = account_id;
     }
 
-    getName(): string {
-        return this.name;
+    get name(): string {
+        return this._name;
     }
 
-    setName(name: string): void {
-        this.name = name;
+    set name(name: string) {
+        this._name = name;
     }
 
-    getIban(): string {
-        return this.iban;
+    get iban(): string {
+        return this._iban;
     }
 
-    setIban(iban: string): void {
-        this.iban = iban;
+    set iban(iban: string) {
+        this._iban = iban;
     }
 
-    getBank(): string {
-        return this.bank;
+    get bank(): string {
+        return this._bank;
     }
 
-    setBank(bank: string): void {
-        this.bank = bank;
+    set bank(bank: string) {
+        this._bank = bank;
     }
 
-    getAccountId(): number {
-        return this.account_id;
+    get account_id(): number {
+        return this._account_id;
     }
 
-    setAccountId(account_id: number): void {
-        this.account_id = account_id;
+    set account_id(account_id: number) {
+        this._account_id = account_id;
     }
 }
