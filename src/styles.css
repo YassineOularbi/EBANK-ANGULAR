@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root{
+    /* COLORS */
+    --primary-color: #E1ECF8;
+    --secondary-color: #121E3D;
+    /* TRANSITION */
+    --tran-02 : all 0.2s ease;
+    --tran-03 : all 0.3s ease;
+    --tran-04 : all 0.4s ease;
+    --tran-05 : all 0.5s ease;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background-image: url("/assets/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-color: black;
+}

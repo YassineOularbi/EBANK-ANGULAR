@@ -1,0 +1,39 @@
+.transaction-list-container {
+    padding: 20px;
+  }
+  
+  .filter-buttons {
+    margin-bottom: 20px;
+  }
+  
+  .filter-buttons .btn {
+    margin-right: 10px;
+  }
+  
+  .transaction-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .transaction-table th, .transaction-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .transaction-table th {
+    background-color: #f4f4f4;
+    text-align: left;
+  }
+  
+  .transaction-details {
+    margin-top: 20px;
+  }
+  
+  .transaction-details p {
+    margin: 5px 0;
+  }
+  
+  .transaction-details .btn {
+    margin-top: 10px;
+  }
+  

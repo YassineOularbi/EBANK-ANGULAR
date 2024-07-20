@@ -1,0 +1,189 @@
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+}
+.Home{
+    width: 50%;
+    height: 800px;
+    padding: 50px;
+}
+
+.update_25-173 {
+    padding: 4px 8px 4px 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 4px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: 1px solid #127a3fa4;
+    border-width: 1px;
+    background: linear-gradient(180deg, #127A3F 0%, rgba(255, 255, 255, 0)00%);
+    width: 300px;
+    height: 30px;
+    box-shadow: 0px 30px 60px 0px #0000007f;
+  }
+  .text-cashback-for-new-costumers_25-174 {
+    color: #00fca87f;
+    font-weight: 400;
+    text-align: left;
+    text-wrap: nowrap;
+  }
+  .text-your-secure---flexible-finance-system_25-175 {
+    font-size: 60px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    line-height: 100px;
+    letter-spacing: 0%;
+    padding-top: 50px;
+    text-decoration: none;
+    font-weight: 400;
+    text-align: left;
+    width: 300px;
+    height: 400px;
+    color: white;
+  }
+  
+  .users{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+    height: 100px;
+    padding: 20px;
+  }
+  .users img{
+    width: 50px;
+    margin-left: -7px;
+  }
+  .downloads{
+    color: white;
+    margin-left: -5px;
+  }
+  .using{
+    padding-top: 5px;
+    display: flex;
+    flex-direction: row;
+  }
+  .using img{
+    width: 20px;
+  }
+  .using p{
+    color: #127A3F;
+    padding-left: 10px;
+    padding-top: 3px;
+    font-size: 16px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+  }
+  .rate{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 200px;
+  }
+
+ .rate .active{
+    padding: 10px;
+    width: 45%;
+    height: 70%;
+    backdrop-filter: blur(10px) saturate(80%);
+    -webkit-backdrop-filter: blur(10px) saturate(80%);
+    background-color: rgba(18, 122, 63, 0.31);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    background: linear-gradient(3deg, rgba(0, 252, 168, 0) 0%, rgba(18,122,63,0.7) 70%, rgba(18,122,63,1) 100%);
+  }
+  .up {
+    width: 100%;
+    height: 40px;
+    padding: 3px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid #00FCA8;
+  }
+  .up img{
+    width: 30px;
+  }
+  .up p{
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+    padding-top: 5px;
+  }
+  .down{
+    width: 100%;
+    height: 80px;
+    padding: 5px 10px;
+    margin: 5px 0px;
+  }
+  .down p{
+    font-size: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    color: #00FCA8;
+  }
+  .separator_21-131 {
+    margin-top: 100px;
+    width: 1200px;
+    height: 100px;
+  }
+  .line_21-133 {
+    display: flex;
+  }
+  
+  .line_21-134 {
+    display: flex;
+  }
+  
+  .services{
+    width: 217%;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .service{
+    width: 25%;
+    height: 90%;
+    border-radius: 20px;
+  }
+  .service img{
+    width: 100%;
+
+  }
+  .service .blur{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    margin-top: -50px;
+    backdrop-filter: blur(10px) saturate(80%);
+    -webkit-backdrop-filter: blur(10px) saturate(80%);
+    background-color: rgba(18, 122, 63, 0.31);
+    border-radius: 20px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    background: rgb(18,122,63);
+    background: linear-gradient(0deg, rgba(18,122,63,1) 0%, rgba(18,122,63,0.7) 30%, rgba(0,252,168,0.1) 100%);
+  }
+  .polygon-icons_24-116 {
+    position: relative;
+    box-sizing: border-box;
+    width: 64px;
+    height: 64px;
+  }
+  .polygon-6_49-1976 {
+    top: -60px;
+    left: 200px;
+    position: absolute;
+  }
+  
+  

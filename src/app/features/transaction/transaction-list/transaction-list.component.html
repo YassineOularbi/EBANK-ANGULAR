@@ -1,1 +1,39 @@
-<p>transaction-list works!</p>
+<div class="transaction-list-container">
+    <h2>Liste des Transactions</h2>
+    <div class="filter-buttons">
+        <button [routerLink]="['/transactions/internal', 10, 9]" class="btn btn-primary">Transactions Internes</button>
+        <button [routerLink]="['/transactions/external', 9, 2]" class="btn btn-secondary">Transactions Externes</button>
+        <button [routerLink]="['/transactions/card', 6, 2]" class="btn btn-success">Transactions par Carte</button>
+      </div>
+    <table class="transaction-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Montant</th>
+          <th>Date</th>
+          <th>Heure</th>
+          <th>Description</th>
+          <th>Type</th>
+          <th>Contexte</th>
+          <th>Méthode</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let transaction of transactions">
+          <td>{{ transaction.id }}</td>
+          <td>{{ transaction.amount | currency }}</td>
+          <td>{{ transaction.date | date }}</td>
+          <td>{{ transaction.time }}</td>
+          <td>{{ transaction.description }}</td>
+          <td>{{ transaction.type }}</td>
+          <td>{{ transaction.context }}</td>
+          <td>{{ transaction.method }}</td>
+          <td>
+            <button class="btn btn-info">Voir Détails</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

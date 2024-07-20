@@ -10,7 +10,7 @@ export class Transaction {
     private _id: number;
     private _amount: number;
     private _date: Date;
-    private _time: Time;
+    private _time: Date;
     private _description: string;
     private _type: TransactionType;
     private _context: TransactionContext;
@@ -24,7 +24,7 @@ export class Transaction {
         id: number,
         amount: number,
         date: Date,
-        time: Time,
+        time: Date,
         description: string,
         type: TransactionType,
         context: TransactionContext,
@@ -72,11 +72,11 @@ export class Transaction {
         this._date = date;
     }
 
-    get time(): Time {
+    get time(): Date {
         return this._time;
     }
 
-    set time(time: Time) {
+    set time(time: Date) {
         this._time = time;
     }
 

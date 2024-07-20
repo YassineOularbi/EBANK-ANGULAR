@@ -10,9 +10,11 @@ import { transactionRoutes } from './features/transaction/transaction.routes';
 import { beneficiaryRoutes } from './features/beneficiary/beneficiary.routes';
 import { accountRoutes } from './features/account/account.routes';
 import { authRoutes } from './features/auth/auth.routes';
+import { mainRoutes } from './app.routes';
 
 
 const routes: Routes = [
+  ...mainRoutes,
   ...authRoutes,
   ...userRoutes,
   ...accountRoutes,

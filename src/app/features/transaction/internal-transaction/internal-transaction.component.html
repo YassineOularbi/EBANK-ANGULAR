@@ -1,1 +1,24 @@
-<p>internal-transaction works!</p>
+<div class="transaction-container">
+    <h2>Effectuer une Transaction Interne</h2>
+    <form [formGroup]="transactionForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="amount">Montant:</label>
+        <input id="amount" formControlName="amount" type="number" step="0.01" />
+        <div *ngIf="transactionForm.get('amount')?.invalid && transactionForm.get('amount')?.touched" class="error">
+          Montant requis et doit être supérieur à 0.
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <input id="description" formControlName="description" type="text" />
+        <div *ngIf="transactionForm.get('description')?.invalid && transactionForm.get('description')?.touched" class="error">
+          Description requise.
+        </div>
+      </div>
+
+  
+      <button type="submit" [disabled]="transactionForm.invalid">Effectuer la Transaction</button>
+    </form>
+  </div>
+  

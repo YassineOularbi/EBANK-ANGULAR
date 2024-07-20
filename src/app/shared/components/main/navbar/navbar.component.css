@@ -1,0 +1,111 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 5rem;
+    background: rgb(18,122,63);
+    background: linear-gradient(0deg, rgba(18,122,63,0.05) 0%, rgba(18,122,63,0.1) 10%, rgba(18,122,63,0.2) 20%, rgba(18,122,63,0.4) 40%, rgba(18,122,63,0.6) 60%, rgba(18,122,63,1) 100%);
+    z-index: -10000;
+}
+.notif, .account{
+    position: relative;
+    z-index: 1000;
+    width: 8%;
+    height: 3rem;
+}
+.notif div{
+    width: 40px;
+    height: 40px;
+    top: 8px;
+    left: 20px;
+    position: absolute;
+    z-index: 1000;
+    border-radius: 100%;
+    background: rgb(0,252,168);
+    background: radial-gradient(circle, rgba(0,252,168,1) 0%, rgba(3,231,151,1) 20%, rgba(6,212,135,1) 40%, rgba(15,147,83,1) 72%, rgba(15,147,83,1) 75%, rgba(18,122,63,1) 92%);
+    padding: 8px;
+}
+.account div{
+    width: 40px;
+    height: 40px;
+    top: 8px;
+    right: 20px;
+    position: absolute;
+    z-index: 1000;
+    border-radius: 100%;
+    background: rgb(0,252,168);
+    background: radial-gradient(circle, rgba(0,252,168,1) 0%, rgba(3,231,151,1) 20%, rgba(6,212,135,1) 40%, rgba(15,147,83,1) 72%, rgba(15,147,83,1) 75%, rgba(18,122,63,1) 92%);
+    padding-left: 10px;
+    padding-top: 8px;
+}
+.notif div img{
+    width: 24px;
+    height: 24px;
+}
+.account div img{
+    width: 20px;
+}
+.logo{
+    z-index: 1000;
+    position: relative;
+    width: 20%;
+    height: 5rem;
+}
+.logo-img{
+    width: 35%;
+    position: absolute;
+    z-index: 1000;
+    top: 5px;
+    left: 90px;
+}
+img{
+    width: 100%;
+}
+.left-option{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    width: 30%;
+    height: 3rem;
+}
+.right-option{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    width: 30%;
+    height: 3rem;
+}
+.option{
+    width: 30%;
+    height: 80%;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: 17px;
+    color: #fff;
+    padding-top: 10px;
+}
+.active{
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 13px 12px 13px 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+
+    background: linear-gradient(
+      180deg,
+      #313a5b00 0%,
+      #127a3f 78.90859246253967%,
+      #313a5b38 100%
+    );
+    width: 120px;
+    height: 40px;
+}

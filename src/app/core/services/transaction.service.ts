@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { TransactionDto } from '../dtos/transaction.dto';
+import { Transaction } from '../models/transaction.model';
 
 @Injectable({
   providedIn: 'root'
@@ -27,12 +28,12 @@ export class TransactionService {
   }
 
   // Get all transactions by account ID
-  getAllByAccount(id: string): Observable<TransactionDto[]> {
-    return this.httpClient.get<TransactionDto[]>(`${this.URL}get-transactions-by-account/${id}`);
+  getAllByAccount(id: string): Observable<Transaction[]> {
+    return this.httpClient.get<Transaction[]>(`${this.URL}get-transactions-by-account/${id}`);
   }
 
   // Get transaction by ID
-  getById(id: string): Observable<TransactionDto> {
-    return this.httpClient.get<TransactionDto>(`${this.URL}get-by-id/${id}`);
+  getById(id: string): Observable<Transaction> {
+    return this.httpClient.get<Transaction>(`${this.URL}get-by-id/${id}`);
   }
 }

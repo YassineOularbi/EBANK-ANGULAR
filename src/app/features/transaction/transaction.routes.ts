@@ -24,7 +24,7 @@ export const transactionRoutes: Routes = [
     canActivate: [authGuard]
   },
   {
-    path: 'transactions/account/:id',
+    path: 'transactions',
     component: TransactionListComponent,
     canActivate: [authGuard]
   },
