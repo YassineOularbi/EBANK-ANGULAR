@@ -1,0 +1,47 @@
+.frame-3705_208-93 {
+    position: fixed;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 50px;
+    border-image-source: #ff0000;
+    border-image-slice: 1;
+    border-style: solid;
+    border-width: 1px;
+    background: linear-gradient(
+      180deg,
+      #127a3f7f 0%,
+      #127a3fbf 25%,
+      #127a3f 50%,
+      #127a3fbf 75%,
+      #127a3f7f 100%
+    );
+    width: 80px;
+    height: 635px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  .ellipse-8_208-100 img{
+    width: 40px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  .ellipse-8_208-100 p{
+    transform: rotate(270deg);
+    position: absolute;
+    left: -35px;
+    top: 90px;
+    width: 150px;
+    color: white;
+    font-weight: bold;
+    font-size: 10px;
+
+  }
+  .user{
+    width: 60px;
+    height: 60px;
+  }
+  

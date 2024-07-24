@@ -109,3 +109,10 @@ img{
     width: 120px;
     height: 40px;
 }
+
+.custom-dialog-container .mat-dialog-container {
+    background: none; /* Changez cela si vous voulez un autre style de fond */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajoutez une ombre pour le style */
+    border-radius: 8px; /* Ajoutez des coins arrondis */
+    padding: 16px; /* Ajoutez du padding pour l'espace intérieur */
+  }

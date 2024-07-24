@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { AuthResponse } from '../interfaces/auth-response.interface';
 import { UserDto } from '../dtos/user.dto';
 import { AuthRequest } from '../interfaces/auth-request.interface';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -13,19 +14,8 @@ export class AuthService {
 
   constructor(private httpClient: HttpClient) { }
 
-  login(authRequest: AuthRequest): void {
-    this.httpClient.post<AuthResponse>(this.URL + "login", authRequest).subscribe({
-      next: (response: AuthResponse) => {
-        const authResponse: AuthResponse = response;
-        if(authResponse.accessToken != null){
-          localStorage.setItem('auth-token', authResponse.accessToken);
-        }
-      },
-      error: (err) => {
-        console.error('Error creating account:', err);
-      }
-      
-    });
+  login(authRequest: AuthRequest): Observable<AuthResponse> {
+    return this.httpClient.post<AuthResponse>(this.URL + "login", authRequest);
   }
 
   signup(userDto: UserDto): void {
